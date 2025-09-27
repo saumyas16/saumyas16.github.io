@@ -14,8 +14,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import '../assets/font.css';
 
-const pages = ['About', 'Education', 'Projects', 'Hobbies'];
-const pagelink = ['about', 'education', 'project', 'hobbies'];
+const pages = ['About', 'Projects', 'Hobbies'];
+const pagelink = ['about', 'project', 'hobbies'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -77,6 +77,23 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'Megrim',
+              fontWeight: 800,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            Saumya Singh
+          </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page,index) => (
               <Button
