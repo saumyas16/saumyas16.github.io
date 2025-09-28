@@ -2,7 +2,7 @@ import React from 'react';
 
 function About() {
   return (
-    <div className="about">
+    <div className="about" style={{marginTop:'80px',fontFamily:'Karla'}}>
       <h1>About Me</h1>
       <p>
         I am a passionate developer with a love for creating interactive web applications. My journey in technology began at a young age, and I have continuously sought to expand my knowledge and skills in various programming languages and frameworks.

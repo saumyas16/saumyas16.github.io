@@ -2,7 +2,7 @@ import React from 'react';
 
 function Hobby() {
   return (
-    <div className="hobby-page">
+    <div className="hobby-page" style={{marginTop:'80px',fontFamily:'Karla'}}>
       <h1>My Hobbies</h1>
       <p>
         I enjoy a variety of hobbies that keep me engaged and inspired. From painting to hiking, each activity brings a unique joy and perspective to my life.
