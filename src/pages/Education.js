@@ -140,6 +140,12 @@ function Education() {
                   </ListItemIcon>
                   <ListItemText primary="Proficiency Medal for UG project" />
                 </ListItem>
+                <ListItem sx={{ color: '#bfae6a', fontWeight: 600, fontSize: '1rem', py: 0 }}>
+                  <ListItemIcon sx={{ minWidth: 32, color: '#bfae6a' }}>
+                    <EmojiEventsIcon fontSize="3" />
+                  </ListItemIcon>
+                  <ListItemText primary="Srimati Bhagwati Rameshwar Goyal Scholarship (2019-2020), Jayalakshmi Scholarship (2020-2021) and Shobha Memorial Scholarship (2021-2022)" />
+                </ListItem>
               </List>
             </Box>
           </TimelineContent>

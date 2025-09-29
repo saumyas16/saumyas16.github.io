@@ -15,21 +15,23 @@ import MenuItem from '@mui/material/MenuItem';
 import '../assets/font.css';
 
 const pages = ['About','Education', 'Projects', 'Hobbies'];
-const pagelink = ['', 'education', 'project', 'hobbies'];
+const pagelink = ['', 'education', 'project', 'hobby'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [activePage, setactivePage] = React.useState('About');
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
+
+  const handleCloseNavMenu = (event) => {
+    setAnchorElNav(null);
+    setactivePage(event.target.textContent);
   };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+  const handlePageChange = (event) => {
+    setactivePage('About');
   };
 
 
@@ -88,7 +90,8 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            <Link to="/" style={{ textDecoration: 'none', color:'inherit'}}>Saumya Singh</Link>
+            <Link to="/" onClick={handlePageChange}
+            style={{ textDecoration: 'none', color:'inherit'}}>Saumya Singh</Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page,index) => (
@@ -103,13 +106,14 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
+          {activePage!=='About'
+          && <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open About Me">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <IconButton sx={{ p: 0 }}>
                 <Avatar alt="Saumya Singh" src="./dp.jpeg" />
               </IconButton>
             </Tooltip>
-          </Box>
+          </Box>}
         </Toolbar>
       </Container>
     </AppBar>
